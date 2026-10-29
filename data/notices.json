@@ -1,0 +1,48 @@
+{
+  "notices": [
+    {
+      "date": "2026-10-15",
+      "title": {
+        "en": "Census of business entities begins",
+        "ir": "Ishkanalardın sanagı bashtaldı",
+        "ru": "Началась перепись хозяйствующих субъектов"
+      },
+      "text": {
+        "en": "The first census of business entities in the Zone runs from 15 October to 30 November 2026. Please receive the enumerators. See <a href=\"/business-census.html\">the census</a>.",
+        "ir": "Zonadagı ishkanalardın algachkı sanagı 2026-jıldın 15-oktyabrınan 30-noyabrına cheyin ötöt. Sanoochulardı kabıl alıñız. <a href=\"/business-census.html\">Sanak</a> jönündö karañız.",
+        "ru": "Первая перепись хозяйствующих субъектов Зоны проходит с 15 октября по 30 ноября 2026 года. Просим принять счётчиков. См. <a href=\"/business-census.html\">о переписи</a>."
+      },
+      "signed": {
+        "en": "G. Ryskulova, Director",
+        "ir": "G. Ryskulova, direktor",
+        "ru": "Г. Рыскулова, директор"
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "title": {
+        "en": "Consumer prices, September 2026",
+        "ir": "Kerektöö baaları, 2026-jıldın sentyabrı",
+        "ru": "Потребительские цены, сентябрь 2026 года"
+      },
+      "text": {
+        "en": "Consumer prices rose 7.9% on September 2025. Domestic food prices were stable or lower after the harvest. See <a href=\"/prices.html\">prices</a>.",
+        "ir": "Kerektöö baaları 2025-jıldın sentyabrına salıshtırmaluu 7,9% östü. Tüshümdön kiyin ichki azık-tülük baaları turuktuu boldu je tömöndödü. <a href=\"/prices.html\">Baalardı</a> karañız.",
+        "ru": "Потребительские цены выросли на 7,9% к сентябрю 2025 года. Цены на местное продовольствие после урожая были стабильными или снизились. См. <a href=\"/prices.html\">цены</a>."
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "title": {
+        "en": "Wages and Incomes, second quarter 2026",
+        "ir": "Emgek akı jana kireshe, 2026-jıldın ekinchi kvartalı",
+        "ru": "Заработная плата и доходы, второй квартал 2026 года"
+      },
+      "text": {
+        "en": "The quarterly bulletin has been published. Printed copies are available in the reading room.",
+        "ir": "Kvartaldık byulleten jarıyalandı. Basma nuskaları okuu zalında bar.",
+        "ru": "Опубликован ежеквартальный бюллетень. Печатные экземпляры имеются в читальном зале."
+      }
+    }
+  ]
+}
