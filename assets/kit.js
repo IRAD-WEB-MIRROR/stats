@@ -179,7 +179,7 @@
    "kit_nav": "Keñse",
    "kh1": "Ishkanalardın sanagı bashtaldı",
    "kh2": "Kerektöö baaları, 2026-jıldın sentyabrı",
-   "kh3": "Ishkanalardın sanagınıñ sanoochuları: okuu büttü"
+   "kh3": "Ishkanalardın sanagının sanoochuları: okuu büttü"
   },
   "ru": {
    "kit_home": "Главная",
