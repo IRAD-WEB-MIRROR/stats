@@ -469,13 +469,3 @@ a { color: var(--crimson); }
 @media (max-width: 640px) { .bar .lbl { width: 120px; } .bar .val { width: 64px; } .cd-n { font-size: 2rem; } }
 .pn tr.grp th { background: var(--crimson-wash); color: var(--crimson-deep); padding-top: 8px; }
 .pn .num { padding-right: 16px; }
-
-/* What's left of your wage (wages.html) */
-.wc-form label { display: inline-block; margin: 0 14px 8px 0; }
-.wc-form input, .wc-form select { font: inherit; padding: 4px 6px; border: 1px solid var(--line); }
-.wc-form input { width: 9em; }
-.wc-jobs { margin: 4px 0 10px; }
-.wc-jobs button { margin: 0 4px 4px 0; }
-#wageCalc .facts { margin-bottom: 10px; }
-#wageCalc .tot th, #wageCalc .tot td { border-top: 2px solid var(--ink-2); }
-#wageCalc h3 { margin: 14px 0 4px; font-size: 1rem; }

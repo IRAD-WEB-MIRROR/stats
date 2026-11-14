@@ -25,54 +25,6 @@
       }
     }).catch(function () { [big, mini].forEach(function (e) { if (e) failBox(e); }); });
   };
-  /* What's left of your wage (roadmap X11): Tax Code 2009 (income tax 10%, State Pension Fund 2% from the employee,
-     15% from the employer) and a month's basket at today's prices from today.json */
-  var WAGE = function () {
-    var el = $("#wageCalc"); if (!el) return;
-    var BASKET = [["bread", 30], ["potatoes", 15], ["apples", 6], ["walnuts", 0.5], ["plov", 2], ["taxi", 4]];
-    var RENT = [["", "wcRentNone"], ["rent-talas", ""], ["rent-nurzhan", ""], ["rent-iyik-janyl", ""]];
-    var JOBS = [["wp4", 3250], ["wj0", 9800], ["wj2", 6000], ["wj3", 3400], ["wj4", 2700], ["wj5", 2300], ["wj6", 1850], ["wj7", 1600], ["wcMin", 1000]];
-    function n0(x) { var s = String(Math.round(x)); s = s.replace(/\B(?=(\d{3})+(?!\d))/g, LANG === "en" ? "," : " "); return s; }
-    function n2(x) { var s = (Math.round(x * 100) / 100).toFixed(2).split("."); return n0(+s[0]) + (LANG === "en" ? "." : ",") + s[1]; }
-    function som(p) { return p.som != null ? p.som : (p.som_min + p.som_max) / 2; }
-    function lbl(k) { var P = (I.pages || {})[LANG] || {}; var e = document.querySelector('[data-i18n="' + k + '"]'); return LANG !== "en" && P[k] ? P[k] : e ? (e.getAttribute("data-en") || e.textContent) : t(k); }
-    var gross = 3250, rent = "";
-    try { var q = (location.hash.match(/w=(\d+)/) || [])[1]; if (q) gross = Math.min(999999, +q); } catch (e) {}
-    todayData().then(function (d) {
-      var P = {}; (d.prices || []).forEach(function (x) { P[x.id] = x; });
-      function draw() {
-        var pens = gross * 0.02, tax = gross * 0.10, net = gross - pens - tax, emp = gross * 0.15;
-        var rows = BASKET.filter(function (b) { return P[b[0]]; }).map(function (b) { return { lab: tri(P[b[0]].label), q: b[1], v: som(P[b[0]]) * b[1] }; });
-        var bsum = rows.reduce(function (a, r) { return a + r.v; }, 0), rv = rent && P[rent] ? som(P[rent]) : 0, left = net - bsum - rv;
-        var bread = P.bread ? Math.floor(net / som(P.bread)) : 0, pl = P.plov ? Math.floor(net / som(P.plov)) : 0, pet = P["petrol-92"] ? Math.floor(net / som(P["petrol-92"])) : 0;
-        $("#wcOut", el).innerHTML =
-          '<div class="tbl-wrap"><table class="facts"><tbody>' +
-          "<tr><th>" + esc(t("wcGross")) + '</th><td class="num nw">' + n0(gross) + " " + esc(t("wcSom")) + "</td></tr>" +
-          "<tr><th>" + esc(t("wcPens")) + '</th><td class="num nw">− ' + n2(pens) + "</td></tr>" +
-          "<tr><th>" + esc(t("wcTax")) + '</th><td class="num nw">− ' + n2(tax) + "</td></tr>" +
-          '<tr class="tot"><th>' + esc(t("wcNet")) + '</th><td class="num nw"><b>' + n2(net) + " " + esc(t("wcSom")) + "</b></td></tr>" +
-          '<tr><th class="muted">' + esc(t("wcEmp")) + '</th><td class="num nw muted">' + n2(emp) + " (" + esc(t("wcCost", { v: n0(gross + emp) })) + ")</td></tr>" +
-          "</tbody></table></div>" +
-          "<h3>" + esc(t("wcBasketH")) + "</h3>" +
-          '<div class="tbl-wrap"><table class="facts"><tbody>' +
-          rows.map(function (r) { return "<tr><th>" + esc(r.lab) + " × " + esc(LANG === "en" ? String(r.q) : String(r.q).replace(".", ",")) + '</th><td class="num nw">' + n2(r.v) + "</td></tr>"; }).join("") +
-          (rv ? "<tr><th>" + esc(tri(P[rent].label)) + " " + esc(t("wcMid")) + '</th><td class="num nw">' + n0(rv) + "</td></tr>" : "") +
-          '<tr class="tot"><th>' + esc(t(left >= 0 ? "wcLeft" : "wcShort")) + '</th><td class="num nw"><b>' + n2(Math.abs(left)) + " " + esc(t("wcSom")) + "</b></td></tr>" +
-          "</tbody></table></div>" +
-          '<p class="small">' + esc(t("wcBuys", { b: n0(bread), p: n0(pl), f: n0(pet) })) + "</p>" +
-          '<p class="small muted"><span class="live">' + esc(t("lnLive")) + "</span> " + esc(t("pnUpd", { d: fmtDate(d.date) })) + ". " + esc(t("wcNote")) + "</p>";
-        try { history.replaceState(null, "", "#w=" + Math.round(gross)); } catch (e) {}
-      }
-      el.innerHTML = '<form class="wc-form" onsubmit="return false"><label>' + esc(t("wcIn")) + ' <input type="number" id="wcG" min="0" max="999999" step="50" value="' + gross + '"> ' + esc(t("wcSom")) + "</label> " +
-        '<label>' + esc(t("wcRent")) + ' <select id="wcR">' + RENT.map(function (r) { return '<option value="' + r[0] + '">' + esc(r[0] ? (P[r[0]] ? tri(P[r[0]].label) : r[0]) : t(r[1])) + "</option>"; }).join("") + "</select></label>" +
-        '<div class="filters wc-jobs">' + JOBS.map(function (j) { return '<button type="button" data-w="' + j[1] + '">' + esc(j[0] === "wcMin" ? t("wcMin") : lbl(j[0])) + "</button>"; }).join("") + "</div></form>" +
-        '<div id="wcOut"></div>';
-      $("#wcG", el).addEventListener("input", function () { var v = +this.value; if (v >= 0) { gross = Math.min(999999, v); draw(); } });
-      $("#wcR", el).addEventListener("change", function () { rent = this.value; draw(); });
-      $$(".wc-jobs button", el).forEach(function (b) { b.addEventListener("click", function () { gross = +b.getAttribute("data-w"); $("#wcG", el).value = gross; draw(); }); });
-      draw();
-    }).catch(function () { failBox(el); });
-  };
   var I = window.SITE_I18N;
   var LANGS = ["en", "ir", "ru"];
   var PAGE = document.body.getAttribute("data-page") || "";
@@ -326,7 +278,6 @@
     notices();
     register();
     if (EXTRA) EXTRA();
-    WAGE();
     linkBoxes();
   }
   render();
