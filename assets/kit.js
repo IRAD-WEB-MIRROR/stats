@@ -27,6 +27,10 @@
    "kit_hours": "Office hours",
    "kit_appeals": "Written appeals",
    "kit_travel": "How to get here",
+   "kit_offices": "Offices in the districts",
+   "kit_office": "Office",
+   "kit_town": "Town and address",
+   "kit_tel": "Telephone",
    "kit_allnews": "All news ›",
    "kit_backnews": "‹ Back to the news",
    "kit_othernews": "Other news",
@@ -45,6 +49,7 @@
    "kit_how": "How to apply",
    "kit_isclosed": "Competition closed",
    "kit_phone": "Tel.",
+   "kit_board": "Vacancies in all the state bodies of the Zone are also published together on the portal of the Office of the Governor:",
    "kit_nav": "The Office"
   },
   "ir": {
@@ -70,6 +75,10 @@
    "kit_hours": "Ish saattarı",
    "kit_appeals": "Jazuu jüzündögü kayrıluular",
    "kit_travel": "Kantip jetüügö bolot",
+   "kit_offices": "Aymaktardagı bölümdör",
+   "kit_office": "Bölüm",
+   "kit_town": "Shaar jana darek",
+   "kit_tel": "Telefon",
    "kit_allnews": "Bardık jañılıktar ›",
    "kit_backnews": "‹ Jañılıktarga kaytuu",
    "kit_othernews": "Basha jañılıktar",
@@ -88,6 +97,7 @@
    "kit_how": "Kantip arız berüü kerek",
    "kit_isclosed": "Konkurs jabıldı",
    "kit_phone": "Tel.",
+   "kit_board": "Zonanın bardık mamlekettik organdarının bosh orundarı Gubernatordun apparatının portalında da birge jarıyalanat:",
    "kit_nav": "Keñse"
   },
   "ru": {
@@ -113,6 +123,10 @@
    "kit_hours": "Часы работы",
    "kit_appeals": "Письменные обращения",
    "kit_travel": "Как добраться",
+   "kit_offices": "Подразделения в районах",
+   "kit_office": "Подразделение",
+   "kit_town": "Населённый пункт и адрес",
+   "kit_tel": "Телефон",
    "kit_allnews": "Все новости ›",
    "kit_backnews": "‹ Вернуться к новостям",
    "kit_othernews": "Другие новости",
@@ -131,6 +145,7 @@
    "kit_how": "Как подать документы",
    "kit_isclosed": "Конкурс завершён",
    "kit_phone": "Тел.",
+   "kit_board": "Вакансии всех государственных органов Зоны также публикуются вместе на портале Аппарата губернатора:",
    "kit_nav": "Управление"
   }
  },
@@ -158,6 +173,10 @@
    "kit_hours": "Ish saattarı",
    "kit_appeals": "Jazuu jüzündögü kayrıluular",
    "kit_travel": "Kantip jetüügö bolot",
+   "kit_offices": "Aymaktardagı bölümdör",
+   "kit_office": "Bölüm",
+   "kit_town": "Shaar jana darek",
+   "kit_tel": "Telefon",
    "kit_allnews": "Bardık jañılıktar ›",
    "kit_backnews": "‹ Jañılıktarga kaytuu",
    "kit_othernews": "Basha jañılıktar",
@@ -176,10 +195,11 @@
    "kit_how": "Kantip arız berüü kerek",
    "kit_isclosed": "Konkurs jabıldı",
    "kit_phone": "Tel.",
+   "kit_board": "Zonanın bardık mamlekettik organdarının bosh orundarı Gubernatordun apparatının portalında da birge jarıyalanat:",
    "kit_nav": "Keñse",
-   "kh1": "Ishkanalardın sanagı bashtaldı",
-   "kh2": "Kerektöö baaları, 2026-jıldın sentyabrı",
-   "kh3": "Ishkanalardın sanagının sanoochuları: okuu büttü"
+   "kh1": "Rekorddik hosul toguz ayda ayıl charba önümün IS 6,1 milliardga jetkirdi",
+   "kh2": "Ishkanalardın sanagı bashtaldı",
+   "kh3": "Kerektöö baaları, 2026-jıldın sentyabrı"
   },
   "ru": {
    "kit_home": "Главная",
@@ -204,6 +224,10 @@
    "kit_hours": "Часы работы",
    "kit_appeals": "Письменные обращения",
    "kit_travel": "Как добраться",
+   "kit_offices": "Подразделения в районах",
+   "kit_office": "Подразделение",
+   "kit_town": "Населённый пункт и адрес",
+   "kit_tel": "Телефон",
    "kit_allnews": "Все новости ›",
    "kit_backnews": "‹ Вернуться к новостям",
    "kit_othernews": "Другие новости",
@@ -222,10 +246,11 @@
    "kit_how": "Как подать документы",
    "kit_isclosed": "Конкурс завершён",
    "kit_phone": "Тел.",
+   "kit_board": "Вакансии всех государственных органов Зоны также публикуются вместе на портале Аппарата губернатора:",
    "kit_nav": "Управление",
-   "kh1": "Началась перепись хозяйствующих субъектов",
-   "kh2": "Потребительские цены, сентябрь 2026 года",
-   "kh3": "Счётчики переписи хозяйствующих субъектов: обучение завершено"
+   "kh1": "Рекордный урожай поднял объём сельхозпродукции ОЭЗ Ирад до 6,1 млрд сомов за девять месяцев",
+   "kh2": "Началась перепись хозяйствующих субъектов",
+   "kh3": "Потребительские цены, сентябрь 2026 года"
   }
  }
 });
